@@ -403,7 +403,7 @@ address {
 }
 
 .page-footer .container div:last-child {
-  margin-left: auto;
+  justify-self: end;
 }
 
 .soc-media,
@@ -519,6 +519,7 @@ address {
 .modal {
   position: relative;
   border-radius: 4px;
+  width: 100%;
   max-width: 408px;
   max-height: 584px;
   background-color: #fcfcfc;
@@ -661,7 +662,7 @@ address {
 
 .check-icon {
   opacity: 0;
-  fill: #fff;
+  color: #fdfdf4;
 }
 
 .accept:checked + .custom-checkbox {

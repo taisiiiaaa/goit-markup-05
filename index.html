@@ -32,10 +32,10 @@
                 <a class="nav-option link current" href="/">Studio</a>
               </li>
               <li>
-                <a class="nav-option link" href="/">Portfolio</a>
+                <a class="nav-option link" href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a class="nav-option link" href="/">Contacts</a>
+                <a class="nav-option link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -60,7 +60,9 @@
       <section class="hero-sec">
         <div class="container">
           <h1 class="main-heading">Effective Solutions for Your Business</h1>
-          <button class="order-btn" type="button">Order Service</button>
+          <button class="order-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="features section">
@@ -273,7 +275,7 @@
           </ul>
         </div>
       </section>
-      <section class="portfolio section">
+      <section id="portfolio" class="portfolio section">
         <div class="container">
           <h2 class="subheading">Our Portfolio</h2>
           <ul class="cases">
@@ -389,7 +391,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer id="contacts" class="page-footer">
       <div class="container">
         <div>
           <a class="page-logo" href="./index.html">
@@ -454,9 +456,9 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button">
+        <button class="close-btn" type="button" data-modal-close>
           <svg class="icon" width="8" height="8">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
@@ -520,11 +522,13 @@
                 <use href="./images/icons.svg#icon-tick"></use>
               </svg> </span
             >I accept the terms and conditions of the
-            <a href="/" class="privacy-policy">Privacy Policy</a>
+            <a href="/" class="privacy-policy"> Privacy Policy</a>
           </label>
           <button class="send-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
+
+    <script src="./index.js" defer></script>
   </body>
 </html>

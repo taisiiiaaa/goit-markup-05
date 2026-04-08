@@ -290,7 +290,7 @@ address {
 
 .social-link .icon,
 .soc-link .icon {
-  color: #fdfdfd;
+  fill: #fdfdfd;
 }
 
 .text {
@@ -402,8 +402,11 @@ address {
 
 .page-footer .container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
+}
+
+.page-footer .container div:first-child {
+  margin-right: 120px;
 }
 
 .page-footer .container div:last-child {
@@ -542,7 +545,7 @@ address {
 }
 
 .modal-overlay:not(.is-open) .modal {
-  transform: translate(-20%, -100%);
+  transform: translateY(-300%);
 }
 
 .close-btn {
@@ -562,19 +565,20 @@ address {
 }
 
 .close-btn .icon {
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:focus {
   background-color: #404bbf;
   border: none;
+  outline: none;
 }
 
 .close-btn:hover .icon,
 .close-btn:focus .icon {
-  color: #fff;
+  fill: #fff;
 }
 
 .modal-heading {
@@ -624,16 +628,16 @@ address {
 
 .input-icon {
   position: absolute;
-  color: #2e2f42;
+  fill: #2e2f42;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-wrapper:hover .input-icon,
 .input-wrapper:focus-within .input-icon {
-  color: #4d5ae5;
+  fill: #4d5ae5;
 }
 
 #comment {
@@ -651,22 +655,10 @@ address {
   letter-spacing: 0.04em;
 }
 
-.accept {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .checkbox {
   display: block;
   margin-bottom: 24px;
   cursor: pointer;
-}
-
-.checkbox:hover .custom-checkbox,
-.checkbox:focus .custom-checkbox {
-  border-color: #4d5ae5;
 }
 
 .custom-checkbox {
@@ -678,12 +670,21 @@ address {
   align-items: center;
   justify-content: center;
   margin-right: 8px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:hover .custom-checkbox,
+.accept:focus + .custom-checkbox {
+  border-color: #4d5ae5;
+  outline: none;
 }
 
 .check-icon {
   opacity: 0;
-  color: #fdfdf4;
+  fill: #fdfdf4;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accept:checked + .custom-checkbox {

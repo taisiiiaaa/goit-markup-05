@@ -683,7 +683,7 @@ address {
 
 .check-icon {
   opacity: 0;
-  fill: #fdfdf4;
+  fill: #f4f4fd;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
